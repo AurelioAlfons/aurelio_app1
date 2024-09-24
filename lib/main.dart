@@ -45,24 +45,15 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    "🐦‍🔥 Hello, Welcome to Aurelio's UI 🐲",
-                    style: TextStyle(fontSize: 28),
-                  ),
-                  SizedBox(
-                      width: 10), // Horizontal space between text and icons
-                  Icon(Icons.backpack),
-                  SizedBox(width: 10),
-                  Icon(Icons.leaderboard),
-                  SizedBox(width: 10),
-                  Icon(Icons.person),
-                ],
+              const Text(
+                "🐦‍🔥 Hello, Welcome to Aurelio's UI 🐲",
+                style: TextStyle(fontSize: 28),
               ),
-              const SizedBox(
-                  height: 20), // Vertical space between Row and Button
+              const SizedBox(height: 20), // Space between text and icons
+              const Icon(Icons.backpack),
+              const Icon(Icons.leaderboard),
+              const Icon(Icons.person),
+              const SizedBox(height: 20), // Space between icons and button
               ElevatedButton(
                 child: const Text('Navigate'),
                 onPressed: () {
