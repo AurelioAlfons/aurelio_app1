@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFF3A023)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Aurelio Flutter Home Page'),
+      home: const MyHomePage(title: 'Aurelio Flutter Home'),
     );
   }
 }
@@ -108,6 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
+              'Welcome to Aurelio\'s first flutter project!!!\n\n\n\n'
               'You have pushed the button this many times:',
             ),
             Text(
