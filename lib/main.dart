@@ -1,5 +1,4 @@
 // Author: Aurelio Hevi Alfons
-import 'package:aurelio_app1/original.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,11 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 255, 190, 12),
-          title: const Text("Aurelio Flutter Demo"),
-        ),
-      ),
+          appBar: AppBar(
+            backgroundColor: const Color.fromARGB(255, 255, 190, 12),
+            title: const Text("Aurelio Flutter Demo"),
+          ),
+          body: Container(
+            child: const Text("Hello, Welcome to Aurelio's UI 🐲"),
+            margin: const EdgeInsets.all(50),
+            padding: const EdgeInsets.all(10),
+          )),
     );
   }
 }
