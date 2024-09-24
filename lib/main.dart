@@ -1,13 +1,19 @@
-// Author: Aurelio Hevi Alfons
 import 'package:flutter/material.dart';
+
+// Author: Aurelio Hevi Alfons
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,21 +41,57 @@ class MyApp extends StatelessWidget {
             label: 'School',
           )
         ]),
-        body: const Center(
-          child: Row(
+        body: Center(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                "🐦‍🔥 Hello, Welcome to Aurelio's UI 🐲",
-                style: TextStyle(fontSize: 28),
+              const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    "🐦‍🔥 Hello, Welcome to Aurelio's UI 🐲",
+                    style: TextStyle(fontSize: 28),
+                  ),
+                  SizedBox(
+                      width: 10), // Horizontal space between text and icons
+                  Icon(Icons.backpack),
+                  SizedBox(width: 10),
+                  Icon(Icons.leaderboard),
+                  SizedBox(width: 10),
+                  Icon(Icons.person),
+                ],
               ),
-              SizedBox(height: 28),
-              Icon(Icons.backpack),
-              Icon(Icons.leaderboard),
-              Icon(Icons.person),
+              const SizedBox(
+                  height: 20), // Vertical space between Row and Button
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AboutScreen()),
+                  );
+                },
+                child: const Text('Go to About'),
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class AboutScreen extends StatelessWidget {
+  const AboutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('About Screen'),
+      ),
+      body: const Center(
+        child: Text('This is the About Screen'),
       ),
     );
   }
