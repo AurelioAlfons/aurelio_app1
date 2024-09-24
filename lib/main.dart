@@ -21,8 +21,9 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 255, 190, 12),
-          title: const Text("Aurelio Flutter Demo"),
+          title: const Text("🦜Aurelio Flutter Demo⚡️"),
         ),
+        // Plus button at the bottom
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
           onPressed: () {
@@ -30,6 +31,7 @@ class _MyAppState extends State<MyApp> {
             print('pressed!');
           },
         ),
+        // Add the bottom navigation bar
         bottomNavigationBar: BottomNavigationBar(items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
@@ -71,6 +73,7 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
+// Create another page
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
