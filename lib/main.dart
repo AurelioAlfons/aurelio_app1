@@ -17,9 +17,18 @@ class MyApp extends StatelessWidget {
           title: const Text("Aurelio Flutter Demo"),
         ),
         body: const Center(
-          child: Padding(
-            padding: EdgeInsets.all(10),
-            child: Text("Hello, Welcome to Aurelio's UI 🐲"),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "Hello, Welcome to Aurelio's UI 🐲",
+                style: TextStyle(fontSize: 28),
+              ),
+              SizedBox(height: 20),
+              Icon(Icons.backpack),
+              Icon(Icons.leaderboard),
+              Icon(Icons.person),
+            ],
           ),
         ),
       ),
