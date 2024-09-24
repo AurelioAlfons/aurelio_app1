@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Row(
+              const Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
@@ -64,14 +64,13 @@ class _MyAppState extends State<MyApp> {
               const SizedBox(
                   height: 20), // Vertical space between Row and Button
               ElevatedButton(
+                child: const Text('Navigate'),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const AboutScreen()),
+                    MaterialPageRoute(builder: (_) => const AboutScreen()),
                   );
                 },
-                child: const Text('Go to About'),
               ),
             ],
           ),
