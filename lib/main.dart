@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 255, 190, 12),
           title: const Text("Aurelio Flutter Demo"),
         ),
-        body: Center(
-          child: const Padding(
-            child: Text("Hello, Welcome to Aurelio's UI 🐲"),
+        body: const Center(
+          child: Padding(
             padding: EdgeInsets.all(10),
+            child: Text("Hello, Welcome to Aurelio's UI 🐲"),
           ),
         ),
       ),
